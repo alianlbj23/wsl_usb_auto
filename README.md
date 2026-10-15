@@ -17,15 +17,7 @@
 
 ## 安裝
 
-把腳本放到任意位置即可，例如：
-
-```bash
-git clone git@github.com:alianlbj23/wsl_usb_auto.git
-cd wsl_usb_auto
-python3 wsl_usb_auto.py
-```
-
-腳本會記住自己的路徑並寫進 `.bashrc`，之後搬動位置請重新執行一次 `add`，或透過選單重新設定。
+把 `wsl_usb_auto.py` 放到任意位置即可，不需額外安裝。腳本會記住自己的路徑並寫進 `.bashrc`，之後搬動位置請重新執行一次 `add`，或透過選單重新設定。
 
 ## 使用方式
 
