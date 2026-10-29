@@ -78,7 +78,9 @@ def save_rules(rules):
 
 # ---------- Windows 端 ----------
 def scan_devices():
-    r = subprocess.run([usbipd(), "list"], capture_output=True, text=True, errors="replace")
+    # usbipd 一律輸出 UTF-8；不指定的話 Windows 版 Python 會用系統編碼（如 cp932）解成亂碼
+    r = subprocess.run([usbipd(), "list"], capture_output=True, text=True,
+                       encoding="utf-8", errors="replace")
     devs = []
     for line in r.stdout.splitlines():
         if line.strip().lower().startswith("persisted"):
